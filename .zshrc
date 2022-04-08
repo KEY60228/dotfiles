@@ -20,6 +20,9 @@ fpath=(~/.zsh $fpath)
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 autoload -Uz compinit && compinit
 
+### git-flow-completion
+source ~/.zsh/git-flow-completion.zsh
+
 ### prompt options
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true

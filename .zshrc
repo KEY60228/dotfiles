@@ -40,3 +40,7 @@ then
         eval "$(nodenv init -)"
     fi
 fi
+
+########## for golang ##########
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:${PATH}"

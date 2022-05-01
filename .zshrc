@@ -44,3 +44,6 @@ fi
 ########## for golang ##########
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:${PATH}"
+
+########## for kubectl ##########
+source <(kubectl completion zsh)

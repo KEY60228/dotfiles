@@ -1,9 +1,7 @@
 ########## for new commands ##########
-
 zstyle ":completion:*:commands" rehash 1
 
 ########## for zsh-completions & zsh-autosuggestions ##########
-
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
     source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -11,7 +9,6 @@ if type brew &>/dev/null; then
 fi
 
 ########## for git ##########
-
 ### git-prompt
 source ~/.zsh/git-prompt.sh
 
@@ -30,7 +27,6 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
 ########## for nodenv ##########
-
 if [ -e "$HOME/.nodenv" ]
 then
     export NODENV_ROOT="$HOME/.nodenv"
@@ -47,3 +43,14 @@ export PATH="$GOPATH/bin:${PATH}"
 
 ########## for kubectl ##########
 source <(kubectl completion zsh)
+
+########## for google-cloud-sdk ##########
+### The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOMEBREW_REPOSITORY/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then
+    . "$HOMEBREW_REPOSITORY/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+fi
+
+### The next line enables shell command completion for gcloud.
+if [ -f "$HOMEBREW_REPOSITORY/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then
+    . "$HOMEBREW_REPOSITORY/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+fi

@@ -9,3 +9,7 @@ fi
 if [ -f ~/.zshrc ]; then
     . ~/.zshrc
 fi
+
+if [ -f ~/.aliases.zsh ]; then
+    . ~/.aliases.zsh
+fi

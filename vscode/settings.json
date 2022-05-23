@@ -1,62 +1,67 @@
 {
-    // window
-    "window.newWindowDimensions": "offset",
+  // window
+  "window.newWindowDimensions": "offset",
 
-    // editor
-    "editor.bracketPairColorization.enabled": true,
-    "editor.detectIndentation": false,
-    "editor.lineNumbers": "on",
-    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  // editor
+  "editor.bracketPairColorization.enabled": true,
+  "editor.lineNumbers": "on",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
-    // explorer
-    "explorer.compactFolders": false,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
+  // explorer
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
 
-    // file
-    "files.autoSave": "onFocusChange",
+  // file
+  "files.autoSave": "onFocusChange",
 
-    // workbench
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.editor.enablePreview": false,
+  // timeline
+  "timeline.excludeSources": ["timeline.localHistory"],
 
-    // Vim
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.hlsearch": true,
+  // workbench
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.enablePreview": false,
 
-    // Markdown PDF
-    "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: auto; margin-right: 1cm; \"> <span class='date'></span></div>",
+  // Vim
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.hlsearch": true,
 
-    // YAML
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+  // Markdown PDF
+  "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: auto; margin-right: 1cm; \"> <span class='date'></span></div>",
 
-    // JavaScript, TypeScript
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "always",
+  // YAML
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
-    // Go
-    "go.formatTool": "goimports",
-    "gopls": {
-        "build.experimentalWorkspaceModule": true
-    },
+  // JavaScript, TypeScript
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
 
-    // C/C++
-    "C_Cpp.default.cppStandard": "c++20",
+  // Go
+  "go.formatTool": "goimports",
+  "gopls": {
+    "build.experimentalWorkspaceModule": true
+  },
 
-    // Reed Hat Commons
-    "redhat.telemetry.enabled": false,
+  // C/C++
+  "C_Cpp.default.cppStandard": "c++20",
 
-    // Visual Studio IntelliCode
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // Red Hat Commons
+  "redhat.telemetry.enabled": false,
+
+  // Visual Studio IntelliCode
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }

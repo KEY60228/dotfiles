@@ -54,3 +54,6 @@ fi
 if [ -f "$HOMEBREW_REPOSITORY/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then
     . "$HOMEBREW_REPOSITORY/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 fi
+
+########## for helm ##########
+source <(helm completion zsh)

@@ -3,5 +3,13 @@
     {
         "key": "alt+tab",
         "command": "workbench.action.quickSwitchWindow"
+    },
+    {
+        "key": "cmd+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "explorer.newFolder"
     }
 ]

@@ -57,3 +57,6 @@ fi
 
 ########## for helm ##########
 source <(helm completion zsh)
+
+########## for psql ##########
+export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"

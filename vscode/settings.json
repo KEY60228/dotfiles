@@ -9,6 +9,8 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "editor.inlineSuggest.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
 
   // explorer
   "explorer.compactFolders": false,
@@ -17,9 +19,6 @@
 
   // file
   "files.autoSave": "onFocusChange",
-
-  // timeline
-  "timeline.excludeSources": ["timeline.localHistory"],
 
   // workbench
   "workbench.iconTheme": "vscode-icons",
@@ -64,4 +63,21 @@
 
   // Visual Studio IntelliCode
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+  // Grammarly
+  "grammarly.files.include": [
+    "**/readme.md",
+    "**/README.md",
+    "**/*.txt",
+    "**/*.md"
+  ],
+
+  // Copilot
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  }
 }

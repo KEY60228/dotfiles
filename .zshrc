@@ -26,15 +26,10 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
-########## for nodenv ##########
-if [ -e "$HOME/.nodenv" ]
+########## for anyenv ##########
+if [ -e "$HOME/.anyenv" ]
 then
-    export NODENV_ROOT="$HOME/.nodenv"
-    export PATH="$NODENV_ROOT/bin:$PATH"
-    if command -v nodenv 1>/dev/null 2>&1
-    then
-        eval "$(nodenv init -)"
-    fi
+    eval "$(anyenv init -)"
 fi
 
 ########## for golang ##########

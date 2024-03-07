@@ -13,6 +13,7 @@ tap "ktr0731/evans"
 tap "bufbuild/buf"
 
 # Common
+brew "anyenv"
 brew "ansible"
 brew "gcc"
 brew "gh"
@@ -21,8 +22,6 @@ brew "git-secrets"
 brew "go", link:true
 brew "jq"
 brew "libpq"
-brew "node-build"
-brew "nodenv"
 brew "sfmono-square"
 brew "wget"
 brew "zsh-autosuggestions"

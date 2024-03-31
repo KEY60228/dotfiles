@@ -7,10 +7,10 @@ tap "homebrew/core"
 tap "delphinus/sfmono-square"
 
 # for evans
-tap "ktr0731/evans"
+# tap "ktr0731/evans"
 
 # for buf
-tap "bufbuild/buf"
+# tap "bufbuild/buf"
 
 # Common
 brew "anyenv"
@@ -28,22 +28,22 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 
 # Personal
-brew "hugo"
-brew "kind"
-brew "nmap"
-brew "pstree"
+# brew "hugo"
+# brew "kind"
+# brew "nmap"
+# brew "pstree"
 
 # Work
-brew "buf"
-brew "git-flow-avh"
-brew "golangci-lint"
-brew "helm"
-brew "istioctl"
-brew "kubectl"
-brew "kubectx"
-brew "protobuf"
-brew "python@3.11"
-brew "sops"
+# brew "buf"
+# brew "git-flow-avh"
+# brew "golangci-lint"
+# brew "helm"
+# brew "istioctl"
+# brew "kubectl"
+# brew "kubectx"
+# brew "protobuf"
+# brew "python@3.11"
+# brew "sops"
 
 # Common
 cask "1password"
@@ -65,14 +65,14 @@ cask "warp"
 cask "zoom"
 
 # Personal
-cask "background-music"
-cask "burn"
-cask "logisim-evolution"
-cask "proxyman"
+# cask "background-music"
+# cask "burn"
+# cask "logisim-evolution"
+# cask "proxyman"
 
 # Work
-cask "google-cloud-sdk"
-cask "graphiql"
+# cask "google-cloud-sdk"
+# cask "graphiql"
 
 #####
 vscode "arjun.swagger-viewer"

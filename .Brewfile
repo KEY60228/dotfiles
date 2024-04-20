@@ -47,6 +47,7 @@ brew "zsh-completions"
 
 # Common
 cask "1password"
+cask "arc"
 cask "dbeaver-community"
 cask "deepl"
 cask "discord"

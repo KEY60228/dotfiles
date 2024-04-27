@@ -37,21 +37,27 @@ export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:${PATH}"
 
 ########## for kubectl ##########
-source <(kubectl completion zsh)
-
-########## for google-cloud-sdk ##########
-### The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOMEBREW_REPOSITORY/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then
-    . "$HOMEBREW_REPOSITORY/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-fi
-
-### The next line enables shell command completion for gcloud.
-if [ -f "$HOMEBREW_REPOSITORY/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then
-    . "$HOMEBREW_REPOSITORY/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+if !(type kubectl &>/dev/null); then
+    source <(kubectl completion zsh)
 fi
 
 ########## for helm ##########
-source <(helm completion zsh)
+if !(type helm &>/dev/null); then
+    source <(helm completion zsh)
+fi
+
+########## for google-cloud-sdk ##########
+### The next line updates PATH for the Google Cloud SDK.
+if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then
+    . "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+fi
+
+### The next line enables shell command completion for gcloud.
+if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then
+    . "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+fi
 
 ########## for psql ##########
-export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
+if [ -f "$(brew --prefix)/opt/libpq/bin" ]; then
+    export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
+fi

@@ -35,6 +35,7 @@ brew "zsh-completions"
 # brew "pstree"
 
 # Work
+# brew "azure-cli"
 # brew "buf"
 # brew "git-flow-avh"
 # brew "golangci-lint"

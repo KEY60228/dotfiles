@@ -37,12 +37,12 @@ export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:${PATH}"
 
 ########## for kubectl ##########
-if !(type kubectl &>/dev/null); then
+if type kubectl &>/dev/null; then
     source <(kubectl completion zsh)
 fi
 
 ########## for helm ##########
-if !(type helm &>/dev/null); then
+if type helm &>/dev/null; then
     source <(helm completion zsh)
 fi
 

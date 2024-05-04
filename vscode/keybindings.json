@@ -11,5 +11,9 @@
     {
         "key": "shift+cmd+n",
         "command": "explorer.newFolder"
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "git-graph.view"
     }
 ]

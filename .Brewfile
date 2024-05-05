@@ -50,7 +50,6 @@ brew "zsh-completions"
 # Common
 cask "1password"
 cask "arc"
-cask "dbeaver-community"
 cask "deepl"
 cask "discord"
 cask "docker"
@@ -75,6 +74,7 @@ cask "zoom"
 # cask "proxyman"
 
 # Work
+# cask "dbeaver-community"
 # cask "google-cloud-sdk"
 # cask "graphiql"
 

@@ -37,6 +37,7 @@ brew "zsh-completions"
 # Work
 # brew "azure-cli"
 # brew "buf"
+# brew "direnv"
 # brew "evans"
 # brew "git-flow-avh"
 # brew "golangci-lint"

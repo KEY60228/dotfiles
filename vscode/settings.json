@@ -3,6 +3,7 @@
   "window.newWindowDimensions": "offset",
 
   // editor
+  "editor.tabSize": 2,
   "editor.bracketPairColorization.enabled": true,
   "editor.lineNumbers": "on",
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
@@ -50,6 +51,9 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
 
   // Go
+  "[go]": {
+    "editor.tabSize": 4
+  },
   "go.formatTool": "goimports",
   "gopls": {
     "build.experimentalWorkspaceModule": true

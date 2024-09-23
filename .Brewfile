@@ -20,7 +20,6 @@ brew "gh"
 brew "git"
 brew "git-secrets"
 brew "go", link:true
-brew "hashicorp/tap/terraform"
 brew "jq"
 brew "libpq"
 brew "sfmono-square"

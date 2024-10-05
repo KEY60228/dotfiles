@@ -58,6 +58,6 @@ if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/comp
 fi
 
 ########## for psql ##########
-if [ -f "$(brew --prefix)/opt/libpq/bin" ]; then
+if [ -e "$(brew --prefix)/opt/libpq/bin" ]; then
     export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
 fi

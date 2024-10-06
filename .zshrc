@@ -57,6 +57,11 @@ if [ -f "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/comp
     . "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 fi
 
+### The next line enables gke-gcloud-auth-plugin for kubectl
+if [ -f "$(brew --prefix)/share/google-cloud-sdk/bin/gke-gcloud-auth-plugin" ]; then
+    export USE_GKE_GCLOUD_AUTH_PLUGIN=true
+fi
+
 ########## for psql ##########
 if [ -e "$(brew --prefix)/opt/libpq/bin" ]; then
     export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"

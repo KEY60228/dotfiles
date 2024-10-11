@@ -66,3 +66,7 @@ fi
 if [ -e "$(brew --prefix)/opt/libpq/bin" ]; then
     export PATH="$(brew --prefix)/opt/libpq/bin:$PATH"
 fi
+
+########## for proto ##########
+export PROTO_HOME="$HOME/.proto"
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"

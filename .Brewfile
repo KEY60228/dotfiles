@@ -53,6 +53,7 @@ brew "zsh-completions"
 # Common
 cask "1password"
 cask "arc"
+cask "cursor"
 cask "deepl"
 cask "discord"
 cask "docker"

@@ -3,9 +3,6 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 
-# for Font
-tap "delphinus/sfmono-square"
-
 # for evans
 # tap "ktr0731/evans"
 
@@ -23,7 +20,6 @@ brew "go", link:true
 brew "grep"
 brew "jq"
 brew "libpq"
-brew "sfmono-square"
 brew "wget"
 brew "zsh-autosuggestions"
 brew "zsh-completions"

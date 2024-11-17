@@ -75,3 +75,8 @@ export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
 if [ -e "$(brew --prefix)/opt/direnv" ]; then
     eval "$(direnv hook zsh)"
 fi
+
+########## for mysql ##########
+if [ -e "$(brew --prefix)/opt/mysql-client" ]; then
+    export PATH="$(brew --prefix)/opt/mysql-client/bin:$PATH"
+fi

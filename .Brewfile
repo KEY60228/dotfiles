@@ -79,6 +79,7 @@ cask "zoom"
 # cask "dbeaver-community"
 # cask "google-cloud-sdk"
 # cask "graphiql"
+# cask "postman"
 
 #####
 vscode "codingyu.laravel-goto-view"

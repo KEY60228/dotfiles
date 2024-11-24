@@ -73,13 +73,13 @@ cask "zoom"
 # cask "background-music"
 # cask "burn"
 # cask "logisim-evolution"
-# cask "proxyman"
 
 # Work
 # cask "dbeaver-community"
 # cask "google-cloud-sdk"
 # cask "graphiql"
 # cask "postman"
+# cask "proxyman"
 
 #####
 vscode "codingyu.laravel-goto-view"

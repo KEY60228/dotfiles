@@ -82,6 +82,7 @@ cask "zoom"
 # cask "proxyman"
 
 #####
+vscode "bierner.markdown-mermaid"
 vscode "codingyu.laravel-goto-view"
 vscode "cschlosser.doxdocgen"
 vscode "dbaeumer.vscode-eslint"

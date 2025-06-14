@@ -20,6 +20,7 @@ brew "go", link:true
 brew "grep"
 brew "jq"
 brew "libpq"
+brew "tmux"
 brew "wget"
 brew "zsh-autosuggestions"
 brew "zsh-completions"

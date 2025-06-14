@@ -5,8 +5,10 @@ zstyle ":completion:*:commands" rehash 1
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
     source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    autoload -Uz compinit && compinit
 fi
+autoload -Uz compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=*'
 
 ########## for git ##########
 ### git-prompt
@@ -15,16 +17,28 @@ source ~/.zsh/git-prompt.sh
 ### git-completion
 fpath=(~/.zsh $fpath)
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-autoload -Uz compinit && compinit
 
 ### git-flow-completion
 source ~/.zsh/git-flow-completion.zsh
 
 ### prompt options
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWSTASHSTATE=true
-GIT_PS1_SHOWUPSTREAM=auto
+setopt PROMPT_SUBST; PS1='%F{cyan}%~%f %F{green}$(__git_ps1 "git: (\033[33m%s\033[0m\033[32m)")%f
+%% '
+
+########## for tmux pane title ##########
+if [[ -n "$TMUX" ]]; then
+    preexec() {
+        printf "\033]2;%s\033\\" "$1"
+    }
+    precmd() {
+        printf "\033]2;%s\033\\" "zsh"
+    }
+fi
+
+########## for fzf ##########
+if [ -e "$(brew --prefix)/opt/fzf" ]; then
+    source <(fzf --zsh)
+fi
 
 ########## for anyenv ##########
 if [ -e "$HOME/.anyenv" ]

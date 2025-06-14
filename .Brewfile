@@ -49,6 +49,7 @@ brew "zsh-completions"
 
 # Common
 cask "1password"
+cask "alacritty"
 cask "arc"
 cask "cursor"
 cask "discord"

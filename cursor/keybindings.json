@@ -13,8 +13,12 @@
         "command": "explorer.newFolder"
     },
     {
-        "key": "shift+cmd+g",
+        "key": "shift+ctrl+g",
         "command": "git-graph.view"
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "workbench.view.scm"
     },
     {
         "key": "cmd+f12",
@@ -25,5 +29,19 @@
         "key": "cmd+f12",
         "command": "-editor.action.goToImplementation",
         "when": "editorHasImplementationProvider && editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+j",
+        "command": "terminal.focus"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.closePanel",
+        "when": "panelFocus"
     }
 ]

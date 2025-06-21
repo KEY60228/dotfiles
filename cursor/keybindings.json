@@ -43,5 +43,28 @@
         "key": "cmd+j",
         "command": "workbench.action.closePanel",
         "when": "panelFocus"
+    },
+    {
+        "key": "cmd+down",
+        "command": "-search.action.openResult",
+        "when": "fileMatchOrMatchFocus && searchViewletVisible"
+    },
+    {
+        "key": "alt+cmd+g c",
+        "command": "gitlens.views.searchAndCompare.focus"
+    },
+    {
+        "key": "delete",
+        "command": "gitlens.views.searchAndCompare.clear",
+        "when": "focusedView == 'gitlens.views.searchAndCompare'"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "gitlens.views.searchAndCompare.selectForCompare",
+        "when": "focusedView == 'gitlens.views.searchAndCompare'"
+    },
+    {
+        "key": "alt+cmd+g n",
+        "command": "diffEditor.switchSide"
     }
 ]

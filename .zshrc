@@ -18,9 +18,6 @@ source ~/.zsh/git-prompt.sh
 fpath=(~/.zsh $fpath)
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 
-### git-flow-completion
-source ~/.zsh/git-flow-completion.zsh
-
 ### prompt options
 setopt PROMPT_SUBST; PS1='%F{cyan}%~%f %F{green}$(__git_ps1 "git: (\033[33m%s\033[0m\033[32m)")%f
 %% '

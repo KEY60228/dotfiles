@@ -66,5 +66,10 @@
     {
         "key": "alt+cmd+g n",
         "command": "diffEditor.switchSide"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
     }
 ]

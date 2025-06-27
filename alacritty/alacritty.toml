@@ -18,4 +18,29 @@ size = 12.0
 offset = { x = 0, y = 4 }
 
 [terminal]
-shell = { program = "/bin/zsh", args = ["-l", "-c", "tmux a -t 0 || tmux"] }
+shell = { program = "/bin/zsh", args = ["-l", "-c", "tmux"] }
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
+key = "T"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
+key = "B"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
+key = "F"
+mods = "Command"
+action = "None"

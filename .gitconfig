@@ -16,3 +16,5 @@
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [init]
 	templatedir = ~/.gittemplates/git-secrets/
+[stash]
+	showIncludeUntracked = true

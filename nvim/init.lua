@@ -7,3 +7,6 @@ vim.opt.hlsearch = true
 -- Clipboard settings
 vim.opt.clipboard = 'unnamed'
 
+-- lazy.nvim
+require("config.lazy")
+

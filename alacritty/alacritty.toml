@@ -48,3 +48,14 @@ action = "None"
 key = "F"
 mods = "Command"
 action = "None"
+
+[[keyboard.bindings]]
+key = "s"
+mods = "Super"
+chars = "\u001Bs"
+
+[[keyboard.bindings]]
+key = "w"
+mods = "Super"
+chars = "\u001Bw"
+

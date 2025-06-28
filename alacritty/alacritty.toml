@@ -59,3 +59,23 @@ key = "w"
 mods = "Super"
 chars = "\u001Bw"
 
+[[keyboard.bindings]]
+key = "E"
+mods = "Super|Shift"
+chars = "\u001BE"
+
+[[keyboard.bindings]]
+key = "b"
+mods = "Super"
+chars = "\u001Bb"
+
+[[keyboard.bindings]]
+key = "n"
+mods = "Super"
+chars = "\u001Bn"
+
+[[keyboard.bindings]]
+key = "n"
+mods = "Super|Shift"
+chars = "\u001BN"
+

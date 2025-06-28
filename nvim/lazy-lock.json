@@ -1,5 +1,8 @@
 {
+  "gitsigns.nvim": { "branch": "main", "commit": "1b0350ab707713b2bc6c236151f1a324175347b1" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "nvim-scrollbar": { "branch": "main", "commit": "5b103ef0fd2e8b9b4be3878ed38d224522192c6c" },
   "nvim-tree.lua": { "branch": "master", "commit": "6b5b36659688767fb9f133bb83024ab1466fe5cd" },
+  "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
   "nvim-web-devicons": { "branch": "master", "commit": "19d6211c78169e78bab372b585b6fb17ad974e82" }
 }

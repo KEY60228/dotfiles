@@ -65,3 +65,8 @@ key = "n"
 mods = "Super|Shift"
 chars = "\u001BN"
 
+[[keyboard.bindings]]
+key = "s"
+mods = "Super"
+chars = "\u001Bs"
+

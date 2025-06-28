@@ -42,7 +42,7 @@ return {
           -- Close folder
           api.node.open.edit()
         else
-	  -- Move parent directory
+          -- Move parent directory
           api.node.navigate.parent_close()
         end
       end
@@ -62,24 +62,32 @@ return {
 
     require("nvim-tree").setup({
       on_attach = my_on_attach,
-      git = { enable = false },
+      git = { enable = true },
+      view = {
+        signcolumn = "no",
+      },
       renderer = {
-        indent_markers = {
-          inline_arrows = false,
-        },
+        highlight_git = true,
+        highlight_opened_files = 'name',
         icons = {
-          padding = " ",
-          show = {
-            file = true,
-            folder = true,
-            folder_arrow = true,
-            git = false,
-            modified = false,
-            diagnostics = false,
-            bookmarks = false,
+          glyphs = {
+            git = {
+              unstaged = '!',
+              renamed = '»',
+              untracked = '?',
+              deleted = '✘',
+              staged = '✓',
+              unmerged = '',
+              ignored = '◌',
+            },
           },
-        }
-      }
+        },
+      },
+      actions = {
+        expand_all = {
+          exclude = { '.git' },
+        },
+      },
     })
   end,
 }

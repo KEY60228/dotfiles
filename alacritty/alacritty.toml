@@ -105,3 +105,8 @@ key = "h"
 mods = "Super|Shift"
 chars = "\u001BH"
 
+[[keyboard.bindings]]
+key = "j"
+mods = "Super"
+chars = "\u001Bj"
+

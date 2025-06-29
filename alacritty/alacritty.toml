@@ -90,3 +90,18 @@ key = "Tab"
 mods = "Control|Shift"
 chars = "\u001B,bprev" # , is leader key
 
+[[keyboard.bindings]]
+key = "p"
+mods = "Super"
+chars = "\u001Bp"
+
+[[keyboard.bindings]]
+key = "f"
+mods = "Super|Shift"
+chars = "\u001BF"
+
+[[keyboard.bindings]]
+key = "h"
+mods = "Super|Shift"
+chars = "\u001BH"
+

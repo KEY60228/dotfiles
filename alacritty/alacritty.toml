@@ -79,3 +79,13 @@ key = "n"
 mods = "Super|Shift"
 chars = "\u001BN"
 
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control"
+chars = ",bnext" # , is leader key
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control|Shift"
+chars = ",bprev" # , is leader key
+

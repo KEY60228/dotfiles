@@ -79,3 +79,14 @@ key = "n"
 mods = "Super|Shift"
 chars = "\u001BN"
 
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control"
+chars = "\u001B,bnext" # , is leader key
+
+# comma is mapleader key
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control|Shift"
+chars = "\u001B,bprev" # , is leader key
+

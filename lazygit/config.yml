@@ -1,0 +1,19 @@
+gui:
+  nerdFontsVersion: "3"
+git:
+  mainBranches:
+    - master
+    - main
+    - development
+  branchLogCmd: git log --graph --color=always --name-status --date=format:'%Y/%m/%d %H:%M' {{branchName}} --
+  allBranchesLogCmds:
+    - git log --graph --color=always --name-status --date=format:'%Y/%m/%d %H:%M' --
+  parseEmoji: true
+keybinding:
+  universal:
+    quit: <C-c>
+    nextTab: l
+    prevTab: h
+    nextBlock-alt: <tab>
+    prevBlock-alt: <backtab>
+

@@ -13,6 +13,9 @@ vim.keymap.set({ 'n', 'i' }, '<M-s>', '<cmd>w<CR>', { desc = 'Save File' })
 -- Cmd + w to close buffer
 vim.keymap.set({ 'n', 'i' }, '<M-w>', '<cmd>bd<CR>', { desc = 'Close Buffer' })
 
+-- Cmd + a to select all
+vim.keymap.set({ 'n', 'i' }, '<M-a>', '<ESC>ggVG', { desc = 'Select All' })
+
 -- 24 Bit RGB Color
 vim.api.nvim_set_option('termguicolors', true)
 

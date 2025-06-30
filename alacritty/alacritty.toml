@@ -114,3 +114,8 @@ key = "/"
 mods = "Super"
 chars = ",gcc" # , is leader key
 
+[[keyboard.bindings]]
+key = "a"
+mods = "Super"
+chars = "\u001Ba"
+

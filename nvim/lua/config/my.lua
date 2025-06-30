@@ -53,3 +53,8 @@ vim.api.nvim_set_var('maplocalleader', '\\')
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- display diagnostic
+vim.diagnostic.config({
+  virtual_text = true
+})
+

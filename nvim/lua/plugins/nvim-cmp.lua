@@ -11,6 +11,7 @@ return {
       sources = {
         { name = "nvim_lsp" },
         { name = "luasnip" },
+        { name = "copilot" },
       },
       snippet = {
         expand = function(args)

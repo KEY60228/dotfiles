@@ -18,19 +18,6 @@ return {
   config = function()
     local api = require("nvim-tree.api")
 
-    -- カスタムハイライト設定
-    vim.cmd([[
-      highlight NvimTreeFolderName guifg=#FFFFFF
-      highlight NvimTreeOpenedFolderName guifg=#FFFFFF
-      highlight NvimTreeEmptyFolderName guifg=#FFFFFF
-      highlight NvimTreeGitDirty guifg=#d19a66
-      highlight NvimTreeGitStaged guifg=#b8d166
-      highlight NvimTreeGitNew guifg=#73c991
-      highlight NvimTreeGitRenamed guifg=#56b6c2
-      highlight NvimTreeGitDeleted guifg=#e06c75
-      highlight NvimTreeGitMerge guifg=#e06c75
-    ]])
-
     local function my_on_attach(bufnr)
       local function opts(desc)
         return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }

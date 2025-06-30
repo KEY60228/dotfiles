@@ -110,3 +110,8 @@ key = "j"
 mods = "Super"
 chars = "\u001Bj"
 
+[[keyboard.bindings]]
+key = "/"
+mods = "Super"
+chars = "\u001B,gcc" # , is leader key
+

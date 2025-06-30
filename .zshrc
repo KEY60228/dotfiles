@@ -1,4 +1,7 @@
 ########## for new commands ##########
+export XDG_CONFIG_HOME="$HOME/.config"
+
+########## for new commands ##########
 zstyle ":completion:*:commands" rehash 1
 
 ########## for zsh-completions & zsh-autosuggestions ##########

@@ -1,6 +1,6 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/themes/vscode.toml"
+    "~/.config/alacritty/themes/themes/catppuccin_mocha.toml"
 ]
 
 [window]
@@ -48,3 +48,79 @@ action = "None"
 key = "F"
 mods = "Command"
 action = "None"
+
+[[keyboard.bindings]]
+key = "s"
+mods = "Super"
+chars = "\u001Bs"
+
+[[keyboard.bindings]]
+key = "w"
+mods = "Super"
+chars = "\u001Bw"
+
+[[keyboard.bindings]]
+key = "E"
+mods = "Super|Shift"
+chars = "\u001BE"
+
+[[keyboard.bindings]]
+key = "b"
+mods = "Super"
+chars = "\u001Bb"
+
+[[keyboard.bindings]]
+key = "n"
+mods = "Super"
+chars = "\u001Bn"
+
+[[keyboard.bindings]]
+key = "n"
+mods = "Super|Shift"
+chars = "\u001BN"
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control"
+chars = ",bnext" # , is leader key
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control|Shift"
+chars = ",bprev" # , is leader key
+
+[[keyboard.bindings]]
+key = "p"
+mods = "Super"
+chars = "\u001Bp"
+
+[[keyboard.bindings]]
+key = "f"
+mods = "Super|Shift"
+chars = "\u001BF"
+
+[[keyboard.bindings]]
+key = "h"
+mods = "Super|Shift"
+chars = "\u001BH"
+
+[[keyboard.bindings]]
+key = "j"
+mods = "Super"
+chars = "\u001Bj"
+
+[[keyboard.bindings]]
+key = "/"
+mods = "Super"
+chars = ",gcc" # , is leader key
+
+[[keyboard.bindings]]
+key = "a"
+mods = "Super"
+chars = "\u001Ba"
+
+[[keyboard.bindings]]
+key = "k"
+mods = "Super"
+chars = "\u001Bk"
+

@@ -36,8 +36,8 @@ chars = "\u001b[9;6u"
 
 [[keyboard.bindings]]
 key = "/"
-mods = "Super"
-chars = ",gcc" # , is leader key
+mods = "Command"
+chars = "\u001b[47;3u"
 
 [[keyboard.bindings]]
 key = "a"

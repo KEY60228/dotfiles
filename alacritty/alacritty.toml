@@ -45,19 +45,14 @@ mods = "Command"
 chars = "\u001b[97;3u"
 
 [[keyboard.bindings]]
-key = "B"
-mods = "Command"
-action = "None"
-
-[[keyboard.bindings]]
 key = "b"
-mods = "Super"
-chars = "\u001Bb"
+mods = "Command"
+chars = "\u001b[98;3u"
 
 [[keyboard.bindings]]
-key = "E"
-mods = "Super|Shift"
-chars = "\u001BE"
+key = "e"
+mods = "Command|Shift"
+chars = "\u001b[101;4u"
 
 [[keyboard.bindings]]
 key = "F"
@@ -85,19 +80,14 @@ mods = "Super"
 chars = "\u001Bk"
 
 [[keyboard.bindings]]
-key = "N"
+key = "n"
 mods = "Command"
-action = "None"
+chars = "\u001b[110;3u"
 
 [[keyboard.bindings]]
 key = "n"
-mods = "Super"
-chars = "\u001Bn"
-
-[[keyboard.bindings]]
-key = "n"
-mods = "Super|Shift"
-chars = "\u001BN"
+mods = "Command|Shift"
+chars = "\u001b[110;4u"
 
 [[keyboard.bindings]]
 key = "p"

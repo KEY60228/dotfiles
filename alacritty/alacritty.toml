@@ -71,8 +71,8 @@ chars = "\u001b[104;4u"
 
 [[keyboard.bindings]]
 key = "j"
-mods = "Super"
-chars = "\u001Bj"
+mods = "Command"
+chars = "\u001b[106;3u"
 
 [[keyboard.bindings]]
 key = "k"

@@ -12,8 +12,8 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   keys = {
-    { mode = "n", "<M-b>", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
-    { mode = "n", "<M-E>", "<cmd>NvimTreeFocus<CR>", desc = "Focus NvimTree" },
+    { mode = { "n", "i" }, "<A-b>", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
+    { mode = "n", "<A-E>", "<cmd>NvimTreeFocus<CR>", desc = "Focus NvimTree" },
   },
   config = function()
     local api = require("nvim-tree.api")
@@ -41,8 +41,8 @@ return {
       -- カスタムマッピング
       vim.keymap.set('n', 'l', api.node.open.edit, opts('Edit File or Open Directory'))
       vim.keymap.set('n', 'h', close_node, opts('Close Directory'))
-      vim.keymap.set('n', '<M-n>', api.fs.create, opts('Create File'))
-      vim.keymap.set('n', '<M-N>', api.fs.create, opts('Create Directory'))
+      vim.keymap.set('n', '<A-n>', api.fs.create, opts('Create File'))
+      vim.keymap.set('n', '<A-N>', api.fs.create, opts('Create Directory'))
       vim.keymap.set('n', '<Del>', api.fs.remove, opts('Delete File/Directory'))
       vim.keymap.set('n', 'd', '<Nop>', opts('Disable d key'))
     end

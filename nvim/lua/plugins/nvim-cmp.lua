@@ -20,7 +20,7 @@ return {
       },
       mapping = cmp.mapping.preset.insert({
         ["<C-e>"] = cmp.mapping.close(),
-        ["<M-k>"] = cmp.mapping.complete(),
+        ["<A-k>"] = cmp.mapping.complete(),
         ['<CR>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
             if luasnip.expandable() then

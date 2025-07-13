@@ -7,14 +7,14 @@ vim.opt.hlsearch = true
 -- Clipboard settings
 vim.opt.clipboard = 'unnamed'
 
+-- Cmd + a to select all
+vim.keymap.set({ 'n', 'i' }, '<A-a>', '<ESC>ggVG', { desc = 'Select All' })
+
 -- Cmd + s to save file
-vim.keymap.set({ 'n', 'i' }, '<M-s>', '<cmd>w<CR>', { desc = 'Save File' })
+vim.keymap.set({ 'n', 'i' }, '<A-s>', '<cmd>w<CR>', { desc = 'Save File' })
 
 -- Cmd + w to close buffer
-vim.keymap.set({ 'n', 'i' }, '<M-w>', '<cmd>bd<CR>', { desc = 'Close Buffer' })
-
--- Cmd + a to select all
-vim.keymap.set({ 'n', 'i' }, '<M-a>', '<ESC>ggVG', { desc = 'Select All' })
+vim.keymap.set({ 'n', 'i' }, '<A-w>', '<cmd>bd<CR>', { desc = 'Close Buffer' })
 
 -- 24 Bit RGB Color
 vim.api.nvim_set_option('termguicolors', true)

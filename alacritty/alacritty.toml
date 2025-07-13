@@ -25,102 +25,97 @@ offset = { x = 0, y = 4 }
 shell = { program = "/bin/zsh", args = ["-l", "-c", "tmux"] }
 
 [[keyboard.bindings]]
-key = "W"
+key = "Tab"
+mods = "Control"
+chars = "\u001b[9;5u"
+
+[[keyboard.bindings]]
+key = "Tab"
+mods = "Control|Shift"
+chars = "\u001b[9;6u"
+
+[[keyboard.bindings]]
+key = "/"
+mods = "Command"
+chars = "\u001b[47;3u"
+
+[[keyboard.bindings]]
+key = "a"
+mods = "Command"
+chars = "\u001b[97;3u"
+
+[[keyboard.bindings]]
+key = "b"
+mods = "Command"
+chars = "\u001b[98;3u"
+
+[[keyboard.bindings]]
+key = "e"
+mods = "Command|Shift"
+chars = "\u001b[101;4u"
+
+[[keyboard.bindings]]
+key = "f"
 mods = "Command"
 action = "None"
 
 [[keyboard.bindings]]
-key = "N"
+key = "f"
+mods = "Command|Shift"
+chars = "\u001b[102;4u"
+
+[[keyboard.bindings]]
+key = "h"
 mods = "Command"
 action = "None"
 
 [[keyboard.bindings]]
-key = "T"
-mods = "Command"
-action = "None"
+key = "h"
+mods = "Command|Shift"
+chars = "\u001b[104;4u"
 
 [[keyboard.bindings]]
-key = "B"
+key = "j"
 mods = "Command"
-action = "None"
+chars = "\u001b[106;3u"
 
 [[keyboard.bindings]]
-key = "F"
+key = "k"
+mods = "Command"
+chars = "\u001b[107;3u"
+
+[[keyboard.bindings]]
+key = "n"
+mods = "Command"
+chars = "\u001b[110;3u"
+
+[[keyboard.bindings]]
+key = "n"
+mods = "Command|Shift"
+chars = "\u001b[110;4u"
+
+[[keyboard.bindings]]
+key = "p"
+mods = "Command"
+chars = "\u001b[112;3u"
+
+[[keyboard.bindings]]
+key = "q"
 mods = "Command"
 action = "None"
 
 [[keyboard.bindings]]
 key = "s"
-mods = "Super"
-chars = "\u001Bs"
+mods = "Command"
+chars = "\u001b[115;3u"
+
+[[keyboard.bindings]]
+key = "t"
+mods = "Command"
+action = "None"
 
 [[keyboard.bindings]]
 key = "w"
-mods = "Super"
-chars = "\u001Bw"
-
-[[keyboard.bindings]]
-key = "E"
-mods = "Super|Shift"
-chars = "\u001BE"
-
-[[keyboard.bindings]]
-key = "b"
-mods = "Super"
-chars = "\u001Bb"
-
-[[keyboard.bindings]]
-key = "n"
-mods = "Super"
-chars = "\u001Bn"
-
-[[keyboard.bindings]]
-key = "n"
-mods = "Super|Shift"
-chars = "\u001BN"
-
-[[keyboard.bindings]]
-key = "Tab"
-mods = "Control"
-chars = ",bnext" # , is leader key
-
-[[keyboard.bindings]]
-key = "Tab"
-mods = "Control|Shift"
-chars = ",bprev" # , is leader key
-
-[[keyboard.bindings]]
-key = "p"
-mods = "Super"
-chars = "\u001Bp"
-
-[[keyboard.bindings]]
-key = "f"
-mods = "Super|Shift"
-chars = "\u001BF"
-
-[[keyboard.bindings]]
-key = "h"
-mods = "Super|Shift"
-chars = "\u001BH"
-
-[[keyboard.bindings]]
-key = "j"
-mods = "Super"
-chars = "\u001Bj"
-
-[[keyboard.bindings]]
-key = "/"
-mods = "Super"
-chars = ",gcc" # , is leader key
-
-[[keyboard.bindings]]
-key = "a"
-mods = "Super"
-chars = "\u001Ba"
-
-[[keyboard.bindings]]
-key = "k"
-mods = "Super"
-chars = "\u001Bk"
+mods = "Command"
+chars = "\u001b[119;3u"
 

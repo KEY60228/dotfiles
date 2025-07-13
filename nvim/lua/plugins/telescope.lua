@@ -6,9 +6,9 @@ return {
   },
   config = function()
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<M-p>', builtin.find_files, { desc = 'Telescope find files' })
-    vim.keymap.set('n', '<M-F>', builtin.live_grep, { desc = 'Telescope live grep' })
-    vim.keymap.set('n', '<M-H>', builtin.help_tags, { desc = 'Telescope help tags' })
+    vim.keymap.set('n', '<A-p>', builtin.find_files, { desc = 'Telescope find files' })
+    vim.keymap.set('n', '<A-F>', builtin.live_grep, { desc = 'Telescope live grep' })
+    vim.keymap.set('n', '<A-H>', builtin.help_tags, { desc = 'Telescope help tags' })
 
     require('telescope').setup({
       defaults = {

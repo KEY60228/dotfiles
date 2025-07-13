@@ -25,61 +25,6 @@ offset = { x = 0, y = 4 }
 shell = { program = "/bin/zsh", args = ["-l", "-c", "tmux"] }
 
 [[keyboard.bindings]]
-key = "W"
-mods = "Command"
-action = "None"
-
-[[keyboard.bindings]]
-key = "N"
-mods = "Command"
-action = "None"
-
-[[keyboard.bindings]]
-key = "T"
-mods = "Command"
-action = "None"
-
-[[keyboard.bindings]]
-key = "B"
-mods = "Command"
-action = "None"
-
-[[keyboard.bindings]]
-key = "F"
-mods = "Command"
-action = "None"
-
-[[keyboard.bindings]]
-key = "s"
-mods = "Super"
-chars = "\u001Bs"
-
-[[keyboard.bindings]]
-key = "w"
-mods = "Super"
-chars = "\u001Bw"
-
-[[keyboard.bindings]]
-key = "E"
-mods = "Super|Shift"
-chars = "\u001BE"
-
-[[keyboard.bindings]]
-key = "b"
-mods = "Super"
-chars = "\u001Bb"
-
-[[keyboard.bindings]]
-key = "n"
-mods = "Super"
-chars = "\u001Bn"
-
-[[keyboard.bindings]]
-key = "n"
-mods = "Super|Shift"
-chars = "\u001BN"
-
-[[keyboard.bindings]]
 key = "Tab"
 mods = "Control"
 chars = ",bnext" # , is leader key
@@ -90,9 +35,34 @@ mods = "Control|Shift"
 chars = ",bprev" # , is leader key
 
 [[keyboard.bindings]]
-key = "p"
+key = "/"
 mods = "Super"
-chars = "\u001Bp"
+chars = ",gcc" # , is leader key
+
+[[keyboard.bindings]]
+key = "a"
+mods = "Super"
+chars = "\u001Ba"
+
+[[keyboard.bindings]]
+key = "B"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
+key = "b"
+mods = "Super"
+chars = "\u001Bb"
+
+[[keyboard.bindings]]
+key = "E"
+mods = "Super|Shift"
+chars = "\u001BE"
+
+[[keyboard.bindings]]
+key = "F"
+mods = "Command"
+action = "None"
 
 [[keyboard.bindings]]
 key = "f"
@@ -110,17 +80,47 @@ mods = "Super"
 chars = "\u001Bj"
 
 [[keyboard.bindings]]
-key = "/"
-mods = "Super"
-chars = ",gcc" # , is leader key
-
-[[keyboard.bindings]]
-key = "a"
-mods = "Super"
-chars = "\u001Ba"
-
-[[keyboard.bindings]]
 key = "k"
 mods = "Super"
 chars = "\u001Bk"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
+key = "n"
+mods = "Super"
+chars = "\u001Bn"
+
+[[keyboard.bindings]]
+key = "n"
+mods = "Super|Shift"
+chars = "\u001BN"
+
+[[keyboard.bindings]]
+key = "p"
+mods = "Super"
+chars = "\u001Bp"
+
+[[keyboard.bindings]]
+key = "s"
+mods = "Super"
+chars = "\u001Bs"
+
+[[keyboard.bindings]]
+key = "T"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
+key = "w"
+mods = "Super"
+chars = "\u001Bw"
 

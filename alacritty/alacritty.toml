@@ -76,8 +76,8 @@ chars = "\u001b[106;3u"
 
 [[keyboard.bindings]]
 key = "k"
-mods = "Super"
-chars = "\u001Bk"
+mods = "Command"
+chars = "\u001b[107;3u"
 
 [[keyboard.bindings]]
 key = "n"

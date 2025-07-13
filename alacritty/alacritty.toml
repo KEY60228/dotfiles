@@ -41,8 +41,8 @@ chars = "\u001b[47;3u"
 
 [[keyboard.bindings]]
 key = "a"
-mods = "Super"
-chars = "\u001Ba"
+mods = "Command"
+chars = "\u001b[97;3u"
 
 [[keyboard.bindings]]
 key = "B"
@@ -106,8 +106,8 @@ chars = "\u001Bp"
 
 [[keyboard.bindings]]
 key = "s"
-mods = "Super"
-chars = "\u001Bs"
+mods = "Command"
+chars = "\u001b[115;3u"
 
 [[keyboard.bindings]]
 key = "T"
@@ -115,12 +115,7 @@ mods = "Command"
 action = "None"
 
 [[keyboard.bindings]]
-key = "W"
-mods = "Command"
-action = "None"
-
-[[keyboard.bindings]]
 key = "w"
-mods = "Super"
-chars = "\u001Bw"
+mods = "Command"
+chars = "\u001b[119;3u"
 

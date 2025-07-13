@@ -66,6 +66,11 @@ chars = "\u001b[102;4u"
 
 [[keyboard.bindings]]
 key = "h"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
+key = "h"
 mods = "Command|Shift"
 chars = "\u001b[104;4u"
 
@@ -95,12 +100,17 @@ mods = "Command"
 chars = "\u001b[112;3u"
 
 [[keyboard.bindings]]
+key = "q"
+mods = "Command"
+action = "None"
+
+[[keyboard.bindings]]
 key = "s"
 mods = "Command"
 chars = "\u001b[115;3u"
 
 [[keyboard.bindings]]
-key = "T"
+key = "t"
 mods = "Command"
 action = "None"
 

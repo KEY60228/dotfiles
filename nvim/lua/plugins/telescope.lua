@@ -21,6 +21,7 @@ return {
           "%.git/",
           "node_modules/",
         },
+        path_display = { "truncate" },
       },
       pickers = {
         find_files = {

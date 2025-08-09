@@ -5,9 +5,11 @@ git:
     - master
     - main
     - development
-  branchLogCmd: git log --graph --color=always --pretty=format:'%C(auto)%h %C(cyan)(%ad) %C(white)%s %C(cyan)by %an %C(auto)%d' --date=format:'%Y/%m/%d %H:%M' --decorate {{branchName}} --
+  autoFetch: false
+  autoForwardBranches: none
+  branchLogCmd: git log --graph --color=always --pretty=format:'%C(auto)%h %C(cyan)(%ad) %C(white)%s %C(cyan)by %an %C(auto)%d' --date=format-local:'%Y/%m/%d %H:%M' --decorate {{branchName}} --
   allBranchesLogCmds:
-    - git log --graph --color=always --pretty=format:'%C(auto)%h %C(cyan)(%ad) %C(white)%s %C(cyan)by %an %C(auto)%d' --date=format:'%Y/%m/%d %H:%M' --branches --
+    - git log --graph --color=always --pretty=format:'%C(cyan)(%ad) %C(white)%s %C(cyan)by %an %C(auto)%d' --date=format-local:'%Y/%m/%d %H:%M' --branches --
   parseEmoji: true
 keybinding:
   universal:

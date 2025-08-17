@@ -6,6 +6,7 @@ return {
   },
   config = function()
     require("reviewthem").setup({
+      diff_tool = "alt-diffview",
       ui = "telescope",
     })
   end,

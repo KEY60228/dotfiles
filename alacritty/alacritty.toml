@@ -35,6 +35,11 @@ mods = "Control|Shift"
 chars = "\u001b[9;6u"
 
 [[keyboard.bindings]]
+key = "Enter"
+mods = "Command"
+chars = "\u001b[13;3u"
+
+[[keyboard.bindings]]
 key = "/"
 mods = "Command"
 chars = "\u001b[47;3u"

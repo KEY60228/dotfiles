@@ -1,6 +1,8 @@
 -- move buffer
-vim.keymap.set({ "n", "i" }, "<C-Tab>", "<cmd>bnext<CR>")
-vim.keymap.set({ "n", "i" }, "<C-S-Tab>", "<cmd>bprev<CR>")
+vim.keymap.set({ "n", "i" }, "<C-Tab>", "<cmd>BufferLineCycleNext<CR>")
+vim.keymap.set({ "n", "i" }, "<C-S-Tab>", "<cmd>BufferLineCyclePrev<CR>")
+vim.keymap.set({ "n", "i" }, "<leader>ml", "<cmd>BufferLineMoveNext<CR>")
+vim.keymap.set({ "n", "i" }, "<leader>mh", "<cmd>BufferLineMovePrev<CR>")
 
 -- Auto switch to next buffer when closing
 vim.api.nvim_create_autocmd("BufDelete", {

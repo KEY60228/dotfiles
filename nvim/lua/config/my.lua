@@ -16,6 +16,9 @@ vim.keymap.set({ 'n', 'i' }, '<A-s>', '<cmd>w<CR>', { desc = 'Save File' })
 -- Cmd + w to close buffer
 vim.keymap.set({ 'n', 'i' }, '<A-w>', '<cmd>bd<CR>', { desc = 'Close Buffer' })
 
+-- Command abbreviation: vd -> vert diffsplit
+vim.cmd('cnoreabbrev vd vert diffsplit')
+
 -- 24 Bit RGB Color
 vim.api.nvim_set_option('termguicolors', true)
 

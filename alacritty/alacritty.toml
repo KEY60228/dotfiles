@@ -105,6 +105,11 @@ mods = "Command"
 chars = "\u001b[112;3u"
 
 [[keyboard.bindings]]
+key = "p"
+mods = "Command|Shift"
+chars = "\u001b[112;4u"
+
+[[keyboard.bindings]]
 key = "q"
 mods = "Command"
 action = "None"

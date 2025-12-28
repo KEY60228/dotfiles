@@ -11,6 +11,10 @@ return {
 
     telescope.setup({
       defaults = {
+        cache_picker = {
+          num_pickers = 10,  -- 保持するpickerの数
+          ignore_empty_prompt = true,
+        },
         mappings = {
           i = {
             ['<esc>'] = require('telescope.actions').close,
@@ -32,6 +36,7 @@ return {
     telescope.load_extension("live_grep_args")
 
     vim.keymap.set('n', '<A-p>', builtin.find_files, { desc = 'Telescope find files' })
+    vim.keymap.set('n', '<A-P>', builtin.pickers, { desc = 'Telescope pickers' })
     vim.keymap.set('n', '<A-F>', ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", { desc = 'Telescope live grep' })
     vim.keymap.set('n', '<A-H>', builtin.help_tags, { desc = 'Telescope help tags' })
   end

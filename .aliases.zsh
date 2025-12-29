@@ -8,3 +8,7 @@ alias dcl='docker compose logs -f'
 ########## gcc ##########
 alias gcc='gcc-12'
 alias g++='g++-12'
+
+########## kubectl ##########
+alias k='kubectl'
+

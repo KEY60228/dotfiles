@@ -90,6 +90,11 @@ mods = "Command"
 chars = "\u001b[107;3u"
 
 [[keyboard.bindings]]
+key = "l"
+mods = "Command"
+chars = "\u001b[108;3u"
+
+[[keyboard.bindings]]
 key = "n"
 mods = "Command"
 chars = "\u001b[110;3u"

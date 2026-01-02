@@ -19,6 +19,7 @@ brew "git"
 brew "git-secrets"
 brew "go", link:true
 brew "jq"
+brew "kube-ps1"
 brew "lazygit"
 brew "libpq"
 brew "neofetch"

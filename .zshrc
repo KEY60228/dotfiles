@@ -21,10 +21,6 @@ source ~/.zsh/git-prompt.sh
 fpath=(~/.zsh $fpath)
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 
-### prompt options
-setopt PROMPT_SUBST; PS1='%F{cyan}%~%f %F{green}$(__git_ps1 "git: (\033[33m%s\033[0m\033[32m)")%f
-%% '
-
 ########## for tmux pane title ##########
 if [[ -n "$TMUX" ]]; then
     preexec() {
@@ -106,3 +102,14 @@ fi
 if [ -e "$(brew --prefix)/opt/mysql-client" ]; then
     export PATH="$(brew --prefix)/opt/mysql-client/bin:$PATH"
 fi
+
+### prompt options
+setopt PROMPT_SUBST;
+PS1='%F{cyan}%~%f'
+if [ -e "$(brew --prefix)/opt/kube-ps1" ]; then
+  source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
+  PS1="${PS1} "'$(kube_ps1)'
+fi
+PS1="${PS1}"' %F{green}$(__git_ps1 "git: (\033[33m%s\033[0m\033[32m)")%f
+%% '
+

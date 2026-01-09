@@ -12,6 +12,7 @@ tap "homebrew/core"
 # Common
 brew "ansible"
 brew "anyenv"
+brew "claude-code"
 brew "fzf"
 brew "gcc"
 brew "gh"

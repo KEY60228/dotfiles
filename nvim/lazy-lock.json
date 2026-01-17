@@ -29,5 +29,6 @@
   "reviewthem.nvim": { "branch": "main", "commit": "4c4c823fd6fbeedc5984b8593d9ffc00a713c4fc" },
   "telescope-live-grep-args.nvim": { "branch": "master", "commit": "b80ec2c70ec4f32571478b501218c8979fab5201" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
+  "tmux-send-keys.nvim": { "branch": "main", "commit": "265d89d3c8ff084f2ddf525802ba6b1669d9f4cb" },
   "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" }
 }

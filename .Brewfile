@@ -38,6 +38,7 @@ brew "zsh-completions"
 # brew "pstree"
 
 # Work
+# brew "argocd"
 # brew "azure-cli"
 # brew "buf"
 # brew "direnv"

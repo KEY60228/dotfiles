@@ -40,6 +40,7 @@ brew "zsh-completions"
 # Work
 # brew "argocd"
 # brew "azure-cli"
+# brew "awscli"
 # brew "buf"
 # brew "direnv"
 # brew "evans"

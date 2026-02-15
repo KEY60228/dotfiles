@@ -57,6 +57,7 @@ brew "zsh-completions"
 # brew "protobuf"
 # brew "python@3.11"
 # brew "sops"
+# brew "vfkit"
 
 # Common
 cask "1password"

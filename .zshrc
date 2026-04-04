@@ -1,5 +1,6 @@
 ########## for new commands ##########
 export XDG_CONFIG_HOME="$HOME/.config"
+export EDITOR="vim"
 
 ########## for new commands ##########
 zstyle ":completion:*:commands" rehash 1

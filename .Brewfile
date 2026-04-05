@@ -39,6 +39,7 @@ brew "zsh-completions"
 
 # Work
 # brew "argocd"
+# brew "argoproj/tap/kubectl-argo-rollouts"
 # brew "azure-cli"
 # brew "awscli"
 # brew "buf"

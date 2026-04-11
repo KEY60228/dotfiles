@@ -104,6 +104,11 @@ if [ -e "$(brew --prefix)/opt/mysql-client" ]; then
     export PATH="$(brew --prefix)/opt/mysql-client/bin:$PATH"
 fi
 
+########## for mise ##########
+if [ -e "$(brew --prefix)/bin/mise" ]; then
+    eval "$("$(brew --prefix)/bin/mise" activate zsh)"
+fi
+
 ### prompt options
 setopt PROMPT_SUBST;
 PS1='%F{cyan}%~%f'

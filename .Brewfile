@@ -85,6 +85,7 @@ cask "warp"
 cask "zoom"
 
 # Personal
+# cask "balenaetcher"
 # cask "background-music"
 # cask "burn"
 # cask "deepl"

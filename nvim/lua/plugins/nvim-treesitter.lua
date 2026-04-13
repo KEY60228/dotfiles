@@ -27,6 +27,7 @@ return {
         "lua",
         "make",
         "markdown",
+        "python",
         "query",
         "sql",
         "terraform",

@@ -34,6 +34,7 @@ return {
         "jsonls",
         "lua_ls",
         "sqls",
+        "pyright",
         "terraformls",
         "ts_ls",
         "vimls",

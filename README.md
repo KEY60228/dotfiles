@@ -9,6 +9,10 @@ xcode-select --install
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply KEY60228
 ```
 
+### for Mac
+
+- Remap Caps Lock to Control via System Settings
+
 ## daily usage
 
 ```sh

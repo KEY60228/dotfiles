@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+{{ if eq .chezmoi.os "darwin" -}}
+defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{enabled = 0; value = { parameters = (); type = "standard"; }; }'
+defaults write com.apple.speech.recognition.AppleSpeechRecognitionData "HotKey" -int 0
+defaults write -g KeyRepeat -int 2
+defaults write -g InitialKeyRepeat -int 15
+{{ end -}}

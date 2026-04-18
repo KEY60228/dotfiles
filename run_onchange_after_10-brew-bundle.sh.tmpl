@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+
+{{ if eq .chezmoi.os "darwin" -}}
+# Brewfile hash: {{ include "dot_Brewfile" | sha256sum }}
+brew bundle cleanup --global --verbose --force
+brew bundle --global --verbose --force
+{{ end -}}

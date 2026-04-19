@@ -2,9 +2,30 @@
 set -eu
 
 {{ if eq .chezmoi.os "darwin" -}}
+# Disable press-and-hold for keys in favor of key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
+
+# Disable Emoji & Symbols keyboard shortcut (Cmd+Space)
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{enabled = 0; value = { parameters = (); type = "standard"; }; }'
+
+# Disable the dictation keyboard shortcut
 defaults write com.apple.speech.recognition.AppleSpeechRecognitionData "HotKey" -int 0
+
+# Set a fast key repeat rate
 defaults write -g KeyRepeat -int 2
+
+# Shorten the delay before key repeat starts
 defaults write -g InitialKeyRepeat -int 15
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Disable the bouncing animation when launching apps
+defaults write com.apple.dock launchanim -bool false
+
+# Hide recent and suggested apps in the Dock
+defaults write com.apple.dock show-recents -bool false
+
+# Apply Dock changes immediately
+killall Dock
 {{ end -}}

@@ -12,6 +12,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply KEY60228
 ### for Mac
 
 - Remap Caps Lock to Control via System Settings
+- Disable the Spotlight keyboard shortcut (Cmd+Space) via System Settings
 
 ## daily usage
 

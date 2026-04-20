@@ -75,6 +75,7 @@ cask "logi-options+"
 cask "notion"
 cask "raycast"
 cask "slack"
+cask "tailscale"
 cask "visual-studio-code"
 cask "zoom"
 

@@ -10,6 +10,8 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{ena
 
 # Disable the dictation keyboard shortcut
 defaults write com.apple.speech.recognition.AppleSpeechRecognitionData "HotKey" -int 0
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 164 '{enabled = 0; value = { parameters = (0, 0, 0); type = "standard"; }; }'
+defaults write com.apple.HIToolbox AppleDictationAutoEnable -bool false
 
 # Set a fast key repeat rate
 defaults write -g KeyRepeat -int 2

@@ -19,6 +19,29 @@ defaults write -g KeyRepeat -int 2
 # Shorten the delay before key repeat starts
 defaults write -g InitialKeyRepeat -int 15
 
+# Disable auto-correction
+defaults write -g NSAutoCorrectionEnabled -bool false
+
+# Disable inline predictive text
+defaults write -g NSAutoCorrectionInlinePredictionEnabled -bool false
+defaults write -g NSAutomaticInlinePredictionEnabled -bool false
+
+# Disable automatic capitalization
+defaults write -g NSAutomaticCapitalizationEnabled -bool false
+
+# Disable automatic period substitution (double-space to period)
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Disable smart quotes and dashes
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
+
+# Disable automatic spelling correction
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Disable text completion
+defaults write -g NSAutomaticTextCompletionEnabled -bool false
+
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 

@@ -57,7 +57,7 @@ chars = "\u001b[98;3u"
 [[keyboard.bindings]]
 key = "e"
 mods = "Command|Shift"
-chars = "\u001b[101;4u"
+chars = "\u001b[69;3u"
 
 [[keyboard.bindings]]
 key = "f"
@@ -67,7 +67,7 @@ action = "None"
 [[keyboard.bindings]]
 key = "f"
 mods = "Command|Shift"
-chars = "\u001b[102;4u"
+chars = "\u001b[70;3u"
 
 [[keyboard.bindings]]
 key = "h"
@@ -77,7 +77,7 @@ action = "None"
 [[keyboard.bindings]]
 key = "h"
 mods = "Command|Shift"
-chars = "\u001b[104;4u"
+chars = "\u001b[72;3u"
 
 [[keyboard.bindings]]
 key = "j"
@@ -102,7 +102,7 @@ chars = "\u001b[110;3u"
 [[keyboard.bindings]]
 key = "n"
 mods = "Command|Shift"
-chars = "\u001b[110;4u"
+chars = "\u001b[78;3u"
 
 [[keyboard.bindings]]
 key = "p"
@@ -112,7 +112,7 @@ chars = "\u001b[112;3u"
 [[keyboard.bindings]]
 key = "p"
 mods = "Command|Shift"
-chars = "\u001b[112;4u"
+chars = "\u001b[80;3u"
 
 [[keyboard.bindings]]
 key = "q"

@@ -62,6 +62,7 @@ brew "zsh-completions"
 
 # Common
 cask "1password"
+cask "1password-cli"
 cask "alacritty"
 cask "arc"
 cask "claude-code"

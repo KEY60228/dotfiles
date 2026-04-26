@@ -27,12 +27,12 @@ shell = { program = "/bin/zsh", args = ["-l", "-c", "tmux"] }
 [[keyboard.bindings]]
 key = "Tab"
 mods = "Control"
-chars = "\u001b[9;5u"
+chars = "\u001b[9;5~"
 
 [[keyboard.bindings]]
 key = "Tab"
 mods = "Control|Shift"
-chars = "\u001b[9;6u"
+chars = "\u001b[9;6~"
 
 [[keyboard.bindings]]
 key = "Enter"

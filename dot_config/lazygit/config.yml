@@ -2,6 +2,8 @@ gui:
   nerdFontsVersion: "3"
 os:
   editPreset: "nvim-remote"
+  # OSC 52でクリップボードに転送(SSH経由でもローカルmacOSに届く)
+  copyToClipboardCmd: 'printf "\033]52;c;%s\a" "$(printf "%s" {{text}} | base64 | tr -d "\n")" > /dev/tty'
 git:
   mainBranches:
     - master

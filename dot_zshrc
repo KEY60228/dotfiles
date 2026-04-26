@@ -32,6 +32,13 @@ if [[ -n "$TMUX" ]]; then
     }
 fi
 
+########## for SSH agent forwarding in tmux ##########
+if [ -n "$SSH_TTY" ] && [ -n "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$HOME/.ssh/agent.sock" ]; then
+    mkdir -p "$HOME/.ssh"
+    ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/agent.sock"
+    export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
+fi
+
 ########## for fzf ##########
 if [ -e "$(brew --prefix)/opt/fzf" ]; then
     source <(fzf --zsh)

@@ -5,7 +5,23 @@ vim.keymap.set('i', 'jj', '<ESC>', { silent = true })
 vim.opt.hlsearch = true
 
 -- Clipboard settings
-vim.opt.clipboard = 'unnamed'
+-- OSC 52では * (primary selection) はmacOSに届かないため + を使う
+vim.opt.clipboard = 'unnamedplus'
+
+-- SSH接続時はOSC 52でクライアント側クリップボードに転送
+if vim.env.SSH_TTY then
+  vim.g.clipboard = {
+    name = 'OSC 52',
+    copy = {
+      ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+      ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+    },
+    paste = {
+      ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+      ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+    },
+  }
+end
 
 -- Cmd + a to select all
 vim.keymap.set({ 'n', 'i' }, '<A-a>', '<ESC>ggVG', { desc = 'Select All' })

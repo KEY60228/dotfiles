@@ -1,10 +1,3 @@
-# for evans
-# tap "ktr0731/evans"
-
-# for buf
-# tap "bufbuild/buf"
-
-# Common
 brew "anyenv"
 brew "chezmoi"
 brew "fzf"
@@ -22,46 +15,14 @@ brew "wget"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 
-# Personal
-# brew "gcc"
-# brew "hugo"
-# brew "kind"
-# brew "nmap"
-# brew "pstree"
-
-# Work
-# brew "argocd"
-# brew "argoproj/tap/kubectl-argo-rollouts"
-# brew "azure-cli"
-# brew "awscli"
-# brew "buf"
-# brew "direnv"
-# brew "evans"
-# brew "git-flow-avh"
-# brew "golangci-lint"
-# brew "helm"
-# brew "istioctl"
-# brew "k6"
-# brew "kubectx"
-# brew "kubernetes-cli"
-# brew "kube-ps1"
-# brew "kustomize"
-# brew "libpq"
-# brew "minikube"
-# brew "oven-sh/bun/bun"
-# brew "poppler"
-# brew "protobuf"
-# brew "python@3.11"
-# brew "sops"
-# brew "tflint"
-# brew "vfkit"
-
-# Common
+{{- if ne .profile "server" }}
 cask "1password"
 cask "1password-cli"
 cask "alacritty"
 cask "arc"
 cask "claude-code"
+# cask "cursor"
+# cask "deepl"
 cask "discord"
 cask "docker-desktop"
 cask "figma"
@@ -69,29 +30,86 @@ cask "font-hack-nerd-font"
 cask "google-chrome"
 cask "keyboardcleantool"
 cask "logi-options+"
+# cask "miro"
 cask "notion"
+# cask "postman"
 cask "raycast"
 cask "slack"
 cask "tailscale-app"
 cask "visual-studio-code"
+# cask "warp"
 cask "zoom"
+{{- end }}
 
-# Personal
-# cask "balenaetcher"
-# cask "background-music"
+{{- if eq .profile "home" }}
+cask "balenaetcher"
 # cask "burn"
-# cask "cursor"
-# cask "deepl"
 # cask "grammarly"
 # cask "logisim-evolution"
-# cask "miro"
-# cask "warp"
+# cask "proxyman"
+{{- end }}
 
-# Work
+{{- if eq .profile "server" }}
+brew "gcc"
+brew "helm"
+brew "hugo"
+brew "kind"
+brew "kubectx"
+brew "kubernetes-cli"
+brew "kube-ps1"
+brew "libpq"
+brew "minikube"
+brew "nmap"
+brew "vfkit"
+{{- end }}
+
+{{- if eq .profile "work" }}
+brew "argocd"
+brew "argoproj/tap/kubectl-argo-rollouts"
+brew "azure-cli"
+brew "awscli"
+brew "direnv"
+brew "helm"
+brew "istioctl"
+brew "k6"
+brew "kind"
+brew "kubectx"
+brew "kubernetes-cli"
+brew "kube-ps1"
+brew "kustomize"
+brew "libpq"
+brew "minikube"
+brew "oven-sh/bun/bun"
+brew "tflint"
+cask "gcloud-cli"
+cask "linear-linear"
+{{- end }}
+
+# Archive (R)
+# brew "awscli"
+# brew "libpq"
+# brew "poppler"
+
+# Archive (A)
+# brew "awscli"
+# tap "bufbuild/buf"
+# brew "buf"
+# brew "libpq"
+
+# Archive (R)
+# tap "bufbuild/buf"
+# brew "buf"
+# tap "ktr0731/evans"
+# brew "evans"
+# brew "git-flow-avh"
+# brew "helm"
+# brew "istioctl"
+# brew "kubectx"
+# brew "kubernetes-cli"
+# brew "kube-ps1"
+# brew "libpq"
+# brew "protobuf"
+# brew "sops"
 # cask "dbeaver-community"
 # cask "gcloud-cli"
 # cask "graphiql"
-# cask "linear-linear"
-# cask "postman"
-# cask "proxyman"
-

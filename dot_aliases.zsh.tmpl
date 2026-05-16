@@ -1,14 +1,20 @@
 ########## docker ##########
-alias dc='docker compose'
-alias dcu='docker compose up -d'
-alias dcd='docker compose down'
-alias dcr='docker compose restart'
-alias dcl='docker compose logs -f'
+if type docker &>/dev/null; then
+    alias dc='docker compose'
+    alias dcu='docker compose up -d'
+    alias dcd='docker compose down'
+    alias dcr='docker compose restart'
+    alias dcl='docker compose logs -f'
+fi
 
 ########## gcc ##########
-alias gcc='gcc-12'
-alias g++='g++-12'
+if type gcc-12 &>/dev/null; then
+    alias gcc='gcc-12'
+    alias g++='g++-12'
+fi
 
 ########## kubectl ##########
-alias k='kubectl'
+if type kubectl &>/dev/null; then
+    alias k='kubectl'
+fi
 

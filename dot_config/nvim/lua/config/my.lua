@@ -77,3 +77,37 @@ vim.diagnostic.config({
   virtual_text = true
 })
 
+-- <C-w><C-h/j/k/l> でwindow resize、tmuxの `bind -r` 同様に押し続けで繰り返す
+local function termcode(key)
+  return vim.api.nvim_replace_termcodes(key, true, false, true)
+end
+
+local resize_actions = {
+  [termcode('<C-h>')] = 'vertical resize -5',
+  [termcode('<C-l>')] = 'vertical resize +5',
+  [termcode('<C-j>')] = 'resize -5',
+  [termcode('<C-k>')] = 'resize +5',
+}
+
+local function resize_window(initial_key)
+  local cmd = resize_actions[termcode(initial_key)]
+  if cmd then vim.cmd(cmd) end
+  while true do
+    vim.cmd('redraw')
+    local ok, char = pcall(vim.fn.getcharstr)
+    if not ok or char == '' then return end
+    local next_cmd = resize_actions[char]
+    if next_cmd then
+      vim.cmd(next_cmd)
+    else
+      vim.api.nvim_feedkeys(char, 'n', false)
+      return
+    end
+  end
+end
+
+for _, key in ipairs({ '<C-h>', '<C-j>', '<C-k>', '<C-l>' }) do
+  vim.keymap.set('n', '<C-w>' .. key, function() resize_window(key) end,
+    { silent = true, desc = 'Resize window (repeatable)' })
+end
+

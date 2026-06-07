@@ -2,3 +2,10 @@
 
 [data]
     profile = {{ $profile | quote }}
+
+# Append a concise brew-bundle diff to every `chezmoi diff`:
+#   would install / would upgrade / would uninstall against the *pending* ~/.Brewfile.
+# Implementation lives in dot_local/bin/executable_brewfile-diff so it can also
+# be invoked manually as `brewfile-diff`.
+[hooks.diff.post]
+    command = "{{ .chezmoi.homeDir }}/.local/bin/brewfile-diff"

@@ -1,0 +1,46 @@
+#!/bin/sh
+# Show what `chezmoi apply` would do to the live brew install state.
+#
+# Compares the *pending* ~/.Brewfile (template-expanded via `chezmoi cat`) against
+# the live brew state, then prints three sections:
+#   - would install   : in Brewfile, not installed
+#   - would upgrade   : installed but outdated
+#   - would uninstall : installed but not in Brewfile (top-level only; deps preserved)
+#
+# Wired into `chezmoi diff` via [hooks.diff.post] in ~/.config/chezmoi/chezmoi.toml,
+# and runnable standalone as `brewfile-diff`.
+set -eu
+
+command -v brew >/dev/null 2>&1 || exit 0
+command -v chezmoi >/dev/null 2>&1 || exit 0
+
+tmp=$(mktemp) || exit 0
+inst=$(mktemp) || exit 0
+trap 'rm -f "$tmp" "$inst"' EXIT
+chezmoi cat ~/.Brewfile >"$tmp" 2>/dev/null || exit 0
+
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# --no-upgrade isolates *new* installs (outdated formulae are skipped).
+brew bundle check --verbose --no-upgrade --file="$tmp" </dev/null 2>/dev/null \
+  | awk '/needs to be (installed|tapped)/ {printf "  %-9s %s\n", "[" tolower($2) "]", $3}' \
+  | sort -u > "$inst"
+# Full check covers install + outdated; subtract install to isolate "would upgrade".
+all=$(brew bundle check --verbose --file="$tmp" </dev/null 2>/dev/null \
+  | awk '/needs to be (installed|updated|tapped)/ {printf "  %-9s %s\n", "[" tolower($2) "]", $3}' \
+  | sort -u)
+
+printf '\n=== brew bundle: would install ===\n'
+[ -s "$inst" ] && cat "$inst" || echo "  (none)"
+printf '\n=== brew bundle: would upgrade ===\n'
+upg=$(printf '%s\n' "$all" | grep -vxFf "$inst" 2>/dev/null) || true
+[ -n "$upg" ] && printf '%s\n' "$upg" || echo "  (none)"
+printf '\n=== brew bundle: would uninstall ===\n'
+brew bundle cleanup --file="$tmp" </dev/null 2>/dev/null \
+  | awk '
+      /^Would uninstall formulae:/ {t="formula"; c=1; next}
+      /^Would uninstall casks:/    {t="cask";    c=1; next}
+      /^Would /                    {c=0}
+      c && NF                      {printf "  %-9s %s\n", "[" t "]", $0}
+    ' \
+  | { grep . || echo "  (none)"; }

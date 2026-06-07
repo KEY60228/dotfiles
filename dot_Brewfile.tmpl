@@ -14,13 +14,13 @@ brew "tmux"
 brew "wget"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
-
-{{- if ne .profile "server" }}
-cask "1password"
 cask "1password-cli"
+cask "claude-code@latest"
+
+{{- if or (eq .profile "home") (eq .profile "work") }}
+cask "1password"
 cask "alacritty"
 cask "arc"
-cask "claude-code"
 # cask "cursor"
 # cask "deepl"
 cask "discord"
@@ -49,20 +49,6 @@ cask "balenaetcher"
 # cask "proxyman"
 {{- end }}
 
-{{- if eq .profile "server" }}
-brew "gcc"
-brew "helm"
-brew "hugo"
-brew "kind"
-brew "kube-ps1"
-brew "kubectx"
-brew "kubernetes-cli"
-brew "libpq"
-brew "minikube"
-brew "nmap"
-brew "vfkit"
-{{- end }}
-
 {{- if eq .profile "work" }}
 brew "argocd"
 brew "argoproj/tap/kubectl-argo-rollouts"
@@ -83,6 +69,20 @@ brew "oven-sh/bun/bun"
 brew "tflint"
 cask "gcloud-cli"
 cask "linear-linear"
+{{- end }}
+
+{{- if eq .profile "server" }}
+brew "gcc"
+brew "helm"
+brew "hugo"
+brew "kind"
+brew "kube-ps1"
+brew "kubectx"
+brew "kubernetes-cli"
+brew "libpq"
+brew "minikube"
+brew "nmap"
+brew "vfkit"
 {{- end }}
 
 # Archive (R)

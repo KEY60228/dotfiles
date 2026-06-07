@@ -6,6 +6,11 @@ if [ `uname -m` = "arm64" ]; then
     chmod -R go-w /opt/homebrew/share
 fi
 
+## user-local bin
+if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
 if [ -f ~/.zshrc ]; then
     . ~/.zshrc
 fi

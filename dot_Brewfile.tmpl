@@ -72,6 +72,9 @@ cask "linear-linear"
 {{- end }}
 
 {{- if eq .profile "server" }}
+brew "colima"
+brew "docker"
+brew "docker-compose"
 brew "gcc"
 brew "helm"
 brew "hugo"

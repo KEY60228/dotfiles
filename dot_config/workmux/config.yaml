@@ -1,0 +1,8 @@
+worktree_dir: worktrees/
+nerdfont: true
+panes:
+  - command: nvim .
+    focus: true
+  - command: <agent>
+    split: horizontal
+    percentage: 40

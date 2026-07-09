@@ -1,6 +1,8 @@
 [user]
 	name = Kenta Yamaguchi
 	email = Mt.mouth60228@gmail.com
+[core]
+	excludesFile = ~/.config/git/ignore
 [color]
 	diff = auto
 	status = auto

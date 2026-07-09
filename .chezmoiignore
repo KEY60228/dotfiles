@@ -1,0 +1,3 @@
+# git worktree checkouts (e.g. workmux) — not part of the dotfiles source state
+worktrees
+worktrees/**

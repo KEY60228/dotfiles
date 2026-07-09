@@ -1,0 +1,8 @@
+# Global gitignore (managed by chezmoi)
+# Applies to every repository via core.excludesFile in ~/.gitconfig
+
+**/.claude/settings.local.json
+
+# git worktree checkouts (e.g. workmux)
+worktrees/
+.workmux.yaml

@@ -3,6 +3,11 @@
     url = "https://github.com/alacritty/alacritty-theme.git"
     refreshPeriod = "168h"
 
+[".tmux/plugins/tmux-resurrect"]
+    type = "git-repo"
+    url = "https://github.com/tmux-plugins/tmux-resurrect.git"
+    refreshPeriod = "168h"
+
 [".zsh/git-prompt.sh"]
     type = "file"
     url = "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh"

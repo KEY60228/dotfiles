@@ -1,0 +1,8 @@
+# general セッション
+#   tmuxp load general
+session_name: general
+windows:
+  - window_name: dashboard
+    panes:
+      - shell_command:
+          - workmux dashboard

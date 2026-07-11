@@ -1,0 +1,8 @@
+# workspace セッション
+#   tmuxp load workspace
+session_name: workspace
+windows:
+  - window_name: dashboard
+    panes:
+      - shell_command:
+          - workmux dashboard -s

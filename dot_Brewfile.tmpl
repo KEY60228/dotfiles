@@ -10,11 +10,11 @@ brew "jq"
 brew "lazygit"
 brew "mise"
 brew "neovim"
-brew "raine/workmux/workmux"
+brew "raine/workmux/workmux", trusted: true
 brew "ripgrep"
 brew "tmux"
 brew "tmuxp"
-brew "trasta298/tap/keifu"
+brew "trasta298/tap/keifu", trusted: true
 brew "tree-sitter-cli"
 brew "wget"
 brew "zsh-autosuggestions"
@@ -56,7 +56,7 @@ cask "balenaetcher"
 
 {{- if eq .profile "work" }}
 brew "argocd"
-brew "argoproj/tap/kubectl-argo-rollouts"
+brew "argoproj/tap/kubectl-argo-rollouts", trusted: true
 brew "awscli"
 brew "azure-cli"
 brew "direnv"
@@ -70,7 +70,7 @@ brew "kubernetes-cli"
 brew "kustomize"
 brew "libpq"
 brew "minikube"
-brew "oven-sh/bun/bun"
+brew "oven-sh/bun/bun", trusted: true
 brew "tflint"
 cask "gcloud-cli"
 cask "linear-linear"

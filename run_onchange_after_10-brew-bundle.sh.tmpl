@@ -9,6 +9,9 @@ elif [ -x /usr/local/bin/brew ]; then
 fi
 
 # Brewfile hash: {{ include "dot_Brewfile.tmpl" | sha256sum }}
-brew bundle cleanup --global --verbose --force
-brew bundle --global --verbose --force
+# Install first, then clean up: `brew bundle` grants trust from the
+# Brewfile's `trusted: true` options before loading third-party tap
+# formulae, whereas a standalone `brew bundle cleanup` loads them
+# before syncing the trust store and fails on untrusted taps.
+brew bundle --global --verbose --force --force-cleanup
 {{ end -}}

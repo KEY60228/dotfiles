@@ -1,0 +1,6 @@
+#!/bin/sh
+{{ if eq .profile "server" -}}
+jq '.cliPluginsExtraDirs = ["/opt/homebrew/lib/docker/cli-plugins"]'
+{{ else -}}
+cat
+{{ end -}}

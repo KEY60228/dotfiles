@@ -1,6 +1,7 @@
 [user]
 	name = Kenta Yamaguchi
 	email = Mt.mouth60228@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIDtdm0+VJfzYRa+NltwIZyWnwMLa1mnPi+vcCC0iF3w
 [core]
 	excludesFile = ~/.config/git/ignore
 [color]
@@ -20,3 +21,10 @@
 	templatedir = ~/.gittemplates/git-secrets/
 [stash]
 	showIncludeUntracked = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	allowedSignersFile = /Users/s26266/.ssh/allowed_signers
+[commit]
+	gpgsign = true

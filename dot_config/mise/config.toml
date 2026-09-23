@@ -1,3 +1,5 @@
 [tools]
 go = "1.26.7"
 golangci-lint = "latest"
+node = "lts"
+"npm:zenn-cli" = "latest"

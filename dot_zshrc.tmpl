@@ -56,12 +56,6 @@ setopt hist_ignore_space
 setopt hist_reduce_blanks
 setopt hist_no_store
 
-########## for anyenv ##########
-if [ -e "$HOME/.anyenv" ]
-then
-    eval "$(anyenv init -)"
-fi
-
 ########## for kubectl ##########
 if type kubectl &>/dev/null; then
     source <(kubectl completion zsh)

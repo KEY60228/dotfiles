@@ -108,3 +108,15 @@ for _, key in ipairs({ '<C-h>', '<C-j>', '<C-k>', '<C-l>' }) do
     { silent = true, desc = 'Resize window (repeatable)' })
 end
 
+-- tmuxのwindowを閉じるなどでUI（TUIクライアント）が全て外れたら、
+-- 未保存バッファを保存してサーバー側も終了する（:terminalのジョブがあると孤児として残るため）
+vim.api.nvim_create_autocmd('UILeave', {
+  callback = function()
+    vim.defer_fn(function()
+      if #vim.api.nvim_list_uis() == 0 then
+        vim.cmd('silent! wall')
+        vim.cmd('qall!')
+      end
+    end, 1000)
+  end,
+})

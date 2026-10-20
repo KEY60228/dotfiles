@@ -54,15 +54,12 @@ vim.api.nvim_win_set_option(0, 'number', true)
 -- signcolumn
 vim.api.nvim_win_set_option(0, 'signcolumn', 'yes:1')
 
--- make tab width 2 with space
-vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
-  pattern = '*',
-  callback = function()
-    vim.api.nvim_buf_set_option(0, 'tabstop', 2)
-    vim.api.nvim_buf_set_option(0, 'shiftwidth', 0)
-    vim.api.nvim_buf_set_option(0, 'expandtab', true)
-  end,
-})
+-- デフォルトのインデントはスペース2。
+-- autocmdではなくグローバルオプションにしておくことで、
+-- 各filetypeのftplugin（例: goのnoexpandtab）がsetlocalで上書きできる
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 0
+vim.opt.expandtab = true
 
 -- set leader key
 vim.api.nvim_set_var('mapleader', ',')

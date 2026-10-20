@@ -1,0 +1,12 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- /* Claude Code also writes this file, so only the top-level keys in
+       .chezmoitemplates/claude-settings.json are overwritten; others are kept. */ -}}
+{{- $settings := dict -}}
+{{- if trim .chezmoi.stdin -}}
+{{-   $settings = fromJson .chezmoi.stdin -}}
+{{- end -}}
+{{- $managed := includeTemplate "claude-settings.json" . | fromJson -}}
+{{- range $key, $value := $managed -}}
+{{-   $_ := set $settings $key $value -}}
+{{- end -}}
+{{- toPrettyJson "  " $settings }}

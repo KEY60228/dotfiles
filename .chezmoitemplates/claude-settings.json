@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "permission_prompt|elicitation_dialog",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "workmux set-window-status waiting"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "workmux set-window-status working"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "workmux register-agent && workmux set-window-status done"
+          }
+        ]
+      },
+      {
+        "matcher": "fork",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "workmux register-agent"
+          }
+        ]
+      },
+      {
+        "matcher": "clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -n \"$TMUX\" ] && [ -n \"$TMUX_PANE\" ] && rm -f \"$HOME/.local/state/workmux/agents/tmux__$(printf %s \"${TMUX%%,*}\" | sed \"s|%|%25|g; s|/|%2F|g\")__$(printf %s \"$TMUX_PANE\" | sed \"s|%|%25|g\").json\" || true"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "workmux set-window-status done"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "workmux set-window-status working"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "datadog@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "helm-chart-best-practices@helm-chart-best-practices": true,
+    "linear@claude-plugins-official": true,
+    "notion@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "zenn-publication-review@ais-skills": true
+  },
+  "extraKnownMarketplaces": {
+    "ais-skills": {
+      "source": {
+        "source": "directory",
+        "path": "{{ .chezmoi.homeDir }}/ais-skills"
+      }
+    },
+    "helm-chart-best-practices": {
+      "source": {
+        "source": "github",
+        "repo": "KEY60228/helm-chart-best-practices"
+      }
+    }
+  },
+  "tui": "fullscreen",
+  "autoCompactEnabled": false
+}

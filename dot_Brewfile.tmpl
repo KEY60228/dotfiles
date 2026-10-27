@@ -43,7 +43,6 @@ cask "slack"
 cask "tailscale-app"
 cask "visual-studio-code"
 # cask "warp"
-cask "zoom"
 {{- end }}
 
 {{- if eq .profile "home" }}
@@ -52,6 +51,7 @@ cask "balenaetcher"
 # cask "grammarly"
 # cask "logisim-evolution"
 # cask "proxyman"
+cask "zoom"
 {{- end }}
 
 {{- if eq .profile "work" }}
@@ -74,6 +74,7 @@ brew "oven-sh/bun/bun", trusted: true
 brew "tflint"
 cask "gcloud-cli"
 cask "linear-linear"
+# cask "zoom"
 {{- end }}
 
 {{- if eq .profile "server" }}

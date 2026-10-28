@@ -16,24 +16,38 @@ command -v chezmoi >/dev/null 2>&1 || exit 0
 
 tmp=$(mktemp) || exit 0
 inst=$(mktemp) || exit 0
-trap 'rm -f "$tmp" "$inst"' EXIT
+all=$(mktemp) || exit 0
+trap 'rm -f "$tmp" "$inst" "$all"' EXIT
 chezmoi cat ~/.Brewfile >"$tmp" 2>/dev/null || exit 0
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# `brew bundle check` reports on *stderr*, so 2>&1 is load-bearing: redirecting it
+# to /dev/null silently empties the install/upgrade sections. Lines look like
+# "→ Cask docker-desktop needs to be installed or updated." (the arrow is optional),
+# so anchor on the "needs" token rather than on fixed field positions.
+extract='
+  /needs to be (installed|updated|tapped)/ {
+    for (i = 1; i <= NF; i++) if ($i == "needs") break
+    if (i > 2) printf "  %-9s %s\n", "[" tolower($(i-2)) "]", $(i-1)
+  }
+'
+
 # --no-upgrade isolates *new* installs (outdated formulae are skipped).
-brew bundle check --verbose --no-upgrade --file="$tmp" </dev/null 2>/dev/null \
-  | awk '/needs to be (installed|tapped)/ {printf "  %-9s %s\n", "[" tolower($2) "]", $3}' \
-  | sort -u > "$inst"
+brew bundle check --verbose --no-upgrade --file="$tmp" </dev/null 2>&1 \
+  | awk "$extract" | sort -u > "$inst"
 # Full check covers install + outdated; subtract install to isolate "would upgrade".
-all=$(brew bundle check --verbose --file="$tmp" </dev/null 2>/dev/null \
-  | awk '/needs to be (installed|updated|tapped)/ {printf "  %-9s %s\n", "[" tolower($2) "]", $3}' \
-  | sort -u)
+brew bundle check --verbose --file="$tmp" </dev/null 2>&1 \
+  | awk "$extract" | sort -u > "$all"
 
 printf '\n=== brew bundle: would install ===\n'
-[ -s "$inst" ] && cat "$inst" || echo "  (none)"
+{ cat "$inst" | grep . || echo "  (none)"; }
 printf '\n=== brew bundle: would upgrade ===\n'
-upg=$(printf '%s\n' "$all" | grep -vxFf "$inst" 2>/dev/null) || true
+if [ -s "$inst" ]; then
+  upg=$(grep -vxFf "$inst" "$all") || true
+else
+  upg=$(cat "$all")
+fi
 [ -n "$upg" ] && printf '%s\n' "$upg" || echo "  (none)"
 printf '\n=== brew bundle: would uninstall ===\n'
 brew bundle cleanup --file="$tmp" </dev/null 2>/dev/null \

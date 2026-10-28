@@ -1,0 +1,15 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- /* Claude Code also writes this file (state, OAuth, other MCP servers), so only
+       the servers in .chezmoitemplates/claude-mcp-servers.json are overwritten under
+       mcpServers (user scope, same as `claude mcp add --scope user`); others are kept. */ -}}
+{{- $config := dict -}}
+{{- if trim .chezmoi.stdin -}}
+{{-   $config = fromJson .chezmoi.stdin -}}
+{{- end -}}
+{{- $servers := get $config "mcpServers" | default dict -}}
+{{- $managed := includeTemplate "claude-mcp-servers.json" . | fromJson -}}
+{{- range $name, $server := $managed -}}
+{{-   $_ := set $servers $name $server -}}
+{{- end -}}
+{{- $_ := set $config "mcpServers" $servers -}}
+{{- toPrettyJson "  " $config }}

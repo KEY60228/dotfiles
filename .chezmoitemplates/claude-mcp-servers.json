@@ -1,0 +1,15 @@
+{
+  "bugmap": {
+    "type": "http",
+    "url": "https://bugmap.security-hub.jp/mcp"
+  },
+  "deepwiki": {
+    "type": "http",
+    "url": "https://mcp.deepwiki.com/mcp"
+  },
+  "github": {
+    "type": "http",
+    "url": "https://api.githubcopilot.com/mcp",
+    "headersHelper": "printf '{\"Authorization\": \"Bearer %s\"}' \"$(gh auth token)\""
+  }
+}

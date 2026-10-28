@@ -1,5 +1,6 @@
 worktree_dir: worktrees/
 nerdfont: true
+stale_after: 7d
 panes:
   - command: nvim .
     focus: true

@@ -111,6 +111,10 @@ if [ -e "$(brew --prefix)/bin/mise" ]; then
     eval "$("$(brew --prefix)/bin/mise" activate zsh)"
 fi
 
+########## for curl / git (eMudhra) ##########
+export CURL_CA_BUNDLE="$(brew --prefix)/etc/ca-certificates/cert.pem"
+export GIT_SSL_CAINFO="$CURL_CA_BUNDLE"
+
 ### prompt options
 setopt PROMPT_SUBST;
 PS1='%F{cyan}%~%f'

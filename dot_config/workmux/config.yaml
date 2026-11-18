@@ -1,6 +1,9 @@
 worktree_dir: worktrees/
 nerdfont: true
 stale_after: 7d
+theme:
+  custom:
+    highlight_row_bg: "#45475A"
 panes:
   - command: nvim .
     focus: true
